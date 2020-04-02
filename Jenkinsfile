@@ -1,5 +1,3 @@
-#if running on windows replace sh with bat.
-
 pipeline {
     agent any
 
