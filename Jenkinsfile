@@ -1,3 +1,5 @@
+#if running on windows replace sh with bat.
+
 pipeline {
     agent any
 
@@ -5,14 +7,14 @@ pipeline {
         stage('Build') {
             steps {
                 withMaven(maven : 'Maven') {
-                    bat 'mvn clean install'
+                    sh 'mvn clean install'
                 }
             }
         }
         stage('Test') {
             steps {
                 withMaven(maven : 'Maven') {
-                    bat 'mvn test'
+                    sh 'mvn test'
                 }
             }
         }
